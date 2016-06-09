@@ -1,25 +1,24 @@
 package busqueda;
 
-import java.util.Scanner;
+
+import javax.swing.JOptionPane;
 
 public class Busqueda {
 
     public static void main(String[] args) {
-        Scanner entrada = new Scanner(System.in);
-        System.out.println("Introduce el tamaño del array");
-       String clave=entrada.next();
-       int cla=Integer.parseInt(clave);
         
-        int[] numeros = new int[cla];
+        
+        int tama = Integer.parseInt(JOptionPane.showInputDialog(null, "Introduce el tamaño del array"));
+        int[] numeros = new int[tama];
         for (int i = 0; i < numeros.length; i++) {
             numeros[i] = i * 5;
         }
         Busqueda ejemplo = new Busqueda();
-        System.out.println("Introduce el numero del que quieres saber el indice");
-        String index=entrada.next();
-        int ind = Integer.parseInt(index);
+        
+        int ind = Integer.parseInt(JOptionPane.showInputDialog(null,"Introduce el numero a buscar"));
+        
         int indice = ejemplo.busquedaBinaria(numeros, ind, 0, numeros.length - 1);
-        System.out.println("El indice del valor "+ index +" es: " + indice);
+        System.out.println("El indice del valor "+ ind +" es: " + indice);
         
     }
 

@@ -1,11 +1,15 @@
 package busqueda;
 
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 public class Busqueda {
 
     public static void main(String[] args) {
-        int[] numeros = new int[100];
+        
+        
+        int tama = Integer.parseInt(JOptionPane.showInputDialog(null, "Introduce el tamaño del array"));
+        int[] numeros = new int[tama];
         for (int i = 0; i < numeros.length; i++) {
             numeros[i] = i * 5;
         }

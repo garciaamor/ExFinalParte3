@@ -10,8 +10,11 @@ public class Busqueda {
             numeros[i] = i * 5;
         }
         Busqueda ejemplo = new Busqueda();
+        
+        
         int indice = ejemplo.busquedaBinaria(numeros, 450, 0, numeros.length - 1);
         System.out.println("El indice del valor '450' es: " + indice);
+        
     }
 
     public int busquedaBinaria(int[] listado, int clave, int posInicial, int posFinal) {

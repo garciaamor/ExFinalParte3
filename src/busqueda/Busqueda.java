@@ -15,9 +15,10 @@ public class Busqueda {
         }
         Busqueda ejemplo = new Busqueda();
         
+        int ind = Integer.parseInt(JOptionPane.showInputDialog(null,"Introduce el numero a buscar"));
         
-        int indice = ejemplo.busquedaBinaria(numeros, 450, 0, numeros.length - 1);
-        System.out.println("El indice del valor '450' es: " + indice);
+        int indice = ejemplo.busquedaBinaria(numeros, ind, 0, numeros.length - 1);
+        System.out.println("El indice del valor "+ ind +" es: " + indice);
         
     }
 

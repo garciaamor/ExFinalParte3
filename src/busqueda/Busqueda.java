@@ -15,10 +15,11 @@ public class Busqueda {
             numeros[i] = i * 5;
         }
         Busqueda ejemplo = new Busqueda();
-        
-        
-        int indice = ejemplo.busquedaBinaria(numeros, 550, 0, numeros.length - 1);
-        System.out.println("El indice del valor '450' es: " + indice);
+        System.out.println("Introduce el numero del que quieres saber el indice");
+        String index=entrada.next();
+        int ind = Integer.parseInt(index);
+        int indice = ejemplo.busquedaBinaria(numeros, ind, 0, numeros.length - 1);
+        System.out.println("El indice del valor "+ index +" es: " + indice);
         
     }
 
